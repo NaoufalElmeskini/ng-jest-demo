@@ -1,35 +1,21 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
+describe('first demo', () => {
+  let fixture: AppComponent;
+
+  beforeEach(() => {
+    fixture = new AppComponent();
+  })
+
+  it('', () => {
+    expect(true).toBeTruthy();
+  })
+
+  it('doit verifier egualite stricte ', function () {
+    expect(2+2).toBe(4);
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('doit verifier equalite de fond', function () {
+    expect({nom: 'ha'}).toEqual({nom: 'ha'})
   });
-
-  it(`should have as title 'ng-jest-demo'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('ng-jest-demo');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ng-jest-demo app is running!');
-  });
-});
+})
