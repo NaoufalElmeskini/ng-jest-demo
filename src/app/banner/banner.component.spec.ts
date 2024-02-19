@@ -1,14 +1,30 @@
-import {TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {BannerComponent} from './banner.component';
 
 describe('BannerComponent (minimal)', () => {
-  it('should create', () => {
+  let component: BannerComponent;
+  let fixture: ComponentFixture<BannerComponent>;
+
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [],
       declarations: [BannerComponent]
     });
-    const fixture = TestBed.createComponent(BannerComponent);
-    const component = fixture.componentInstance;
+    fixture = TestBed.createComponent(BannerComponent);
+
+    component = fixture.componentInstance;
+  });
+
+
+
+  it('should create', () => {
+
     expect(component).toBeDefined();
+  });
+
+  it('doit recuperer element html', function () {
+    const bannerElement: HTMLElement = fixture.nativeElement;
+    const bannerParagraph = bannerElement.querySelector('p')!;
+    expect(bannerParagraph.textContent).toEqual(' banner works! ')
   });
 });
