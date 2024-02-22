@@ -17,14 +17,13 @@ describe('BannerComponent (minimal)', () => {
 
 
 
-  it('should create', () => {
-
+  it('should create component', () => {
     expect(component).toBeDefined();
   });
 
   it('doit recuperer element html', function () {
     const bannerElement: HTMLElement = fixture.nativeElement;
     const bannerParagraph = bannerElement.querySelector('p')!;
-    expect(bannerParagraph.textContent).toEqual(' banner works! ')
+    expect(bannerParagraph.textContent).toEqual(' hello from banner! ');
   });
 });

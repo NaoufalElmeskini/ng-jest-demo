@@ -18,4 +18,6 @@ describe('first demo', () => {
   it('doit verifier equalite de fond', function () {
     expect({nom: 'ha'}).toEqual({nom: 'ha'})
   });
+
+
 })

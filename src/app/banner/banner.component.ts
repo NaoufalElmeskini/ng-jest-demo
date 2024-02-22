@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-banner',
   template: `
     <p>
-      banner works!
+      hello from banner!
     </p>
   `,
   styles: [

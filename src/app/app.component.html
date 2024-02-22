@@ -1,5 +1,12 @@
-<h1>hello from ng-jest-demo!</h1>
+<div class="app-container">
+  <app-banner></app-banner>
 
-<app-simple-form></app-simple-form>
+  <app-select-name
+    [animaux] = "listDesAnimaux"
+    ($animalSelectionneEventEmetter)="processSelected($event)">
+  </app-select-name>
+
+  <p>animal gagnant : {{this.nomGagnant}}</p>
+</div>
 
 <router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+
+<div class="select-name-container">
+  <label for="animalSelector" type="text" >choisir animal :</label>
+
+  <select id="animalSelector" [(ngModel)]="animalSelectionne">
+    <option *ngFor="let animal of animaux">{{animal}}</option>
+  </select>
+
+  <p>animal selectionné : {{animalSelectionne}}</p>
+  <button (click)="valider()">valider</button>
+</div>
