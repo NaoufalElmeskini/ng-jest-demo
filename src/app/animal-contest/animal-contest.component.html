@@ -1,0 +1,10 @@
+<div class="app-container">
+  <app-banner></app-banner>
+
+  <app-select-name
+    [animaux] = "listDesAnimaux"
+    ($animalSelectionneEventEmetter)="processSelected($event)">
+  </app-select-name>
+
+  <p>animal gagnant : {{this.nomGagnant}}</p>
+</div>
